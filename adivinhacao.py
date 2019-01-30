@@ -4,16 +4,23 @@ print("*********************************")
 
 numero_secreto = 42
 
-chute_str = input("Digite o seu número: ")
-print("Você digitou: ", chute_str)
+total_de_tentativas = 3
+rodada = 1
 
-chute = int(chute_str)
+while(rodada <= total_de_tentativas):
 
-if (chute == numero_secreto):
-    print("Você acertou!!")
-elif(chute > numero_secreto):
-    print("Você errou!! Seu chute foi maior que o número secreto")
-else:
-    print("Você errou!! Seu chute foi menor que o número secreto")
+    chute_str = input("Digite o seu número: ")
+    print("Você digitou: ", chute_str)
+
+    chute = int(chute_str)
+
+    if (chute == numero_secreto):
+        print("Você acertou!!")
+    elif(chute > numero_secreto):
+        print("Você errou!! Seu chute foi maior que o número secreto")
+    else:
+        print("Você errou!! Seu chute foi menor que o número secreto")
+
+    rodada = rodada +1
 
 print("Fim do jogo.")
