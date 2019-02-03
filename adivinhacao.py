@@ -39,6 +39,10 @@ for rodada in range(0, total_de_tentativas):
         print("Você errou!! Seu chute foi menor que o número secreto")
 
     delta = abs(numero_secreto - chute)
+
+    if(nivel == 3):
+        delta = delta *2
+    
     pontos = pontos - delta
 
 print("Fim do jogo. Você marcou {} pontos!".format(pontos))
