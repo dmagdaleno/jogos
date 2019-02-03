@@ -6,6 +6,7 @@ print("*********************************")
 
 numero_secreto = round(random.random() *100)
 total_de_tentativas = 0
+pontos = 1000
 
 print("\nEscolha um nível.")
 nivel = int(input("\n(1) Fácil, (2) Médio ou (3) Difícil: "))
@@ -37,4 +38,7 @@ for rodada in range(0, total_de_tentativas):
     else:
         print("Você errou!! Seu chute foi menor que o número secreto")
 
-print("Fim do jogo.")
+    delta = abs(numero_secreto - chute)
+    pontos = pontos - delta
+
+print("Fim do jogo. Você marcou {} pontos!".format(pontos))
